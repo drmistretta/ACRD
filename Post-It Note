@@ -1,0 +1,25 @@
+from IPython.display import HTML, display
+
+def display_post_it_note(text):
+    html_content = f"""
+    <div style="
+        background-color: yellow;
+        color: black;
+        padding: 20px;
+        width: 300px;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        ">
+        {text}
+    </div>
+    """
+    display(HTML(html_content))
+
+text = """This is an example of a paragraph formatted to look like a yellow post-it note.
+It should be centered and have a border around it to mimic the appearance of a post-it note."""
+
+display_post_it_note(text)
